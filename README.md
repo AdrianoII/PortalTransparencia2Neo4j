@@ -8,4 +8,4 @@
 
 #### Para executar o script basta alterar o valor da variável path_csv para o path da onde está localizados os seus csv's extraídos.
 
-## Para somente importar o banco, basta [baixar](https://drive.google.com/file/d/1OXy-ZOSvUZcyUwR3ytfVmjH50TEoX5nZ/view?usp=sharing) e extrair o graph.db.zip no local onde esteja localizado o seu graph.db e substituir os arquivos.
+## Para somente importar o banco, basta [baixar](https://drive.google.com/file/d/1efTagHwfbrTflWlBur0WufFowpLceX2S/view?usp=sharing) copie o arquivo para a pasta raiz do seu banco no neo4j e execute o comando `neo4j-admin load --from=transparencia.dump`.
