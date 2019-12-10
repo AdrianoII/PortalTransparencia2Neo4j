@@ -8,4 +8,4 @@
 
 #### Para executar o script basta alterar o valor da variável path_csv para o path da onde está localizados os seus csv's extraidos.
 
-## Para somente importar o banco, basta [baixar] (https://drive.google.com/file/d/1OXy-ZOSvUZcyUwR3ytfVmjH50TEoX5nZ/view?usp=sharing) e extrair o graph.db.zip no local aonde esteja localizado o seu graph.db e substituir os arquivos.
+## Para somente importar o banco, basta [baixar](https://drive.google.com/file/d/1OXy-ZOSvUZcyUwR3ytfVmjH50TEoX5nZ/view?usp=sharing) e extrair o graph.db.zip no local aonde esteja localizado o seu graph.db e substituir os arquivos.
