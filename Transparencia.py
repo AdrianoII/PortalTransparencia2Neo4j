@@ -6,8 +6,8 @@ import time
 
 comeco = time.time()
 
-#Path para a pasta em que os .csv estão extraidos
-path_csv = '/home/adrianoii/TabelasBd/'
+#Path para a pasta em que os .csv estão extraidos exemplo: '/home/adrianoii/TabelasBd/'
+path_csv = 'insira o seu path aqui'
 
 
 
