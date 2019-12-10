@@ -4,6 +4,7 @@
 * Comentar e/ou remover `dbms.directories.import=import`, nas configurações do grafo para podermos abrir arquivos em qualquer path do sistema;
 * Possuir o pandas instalado;
 * Possuir o driver para o python do neo4j;
+* Substitua a palavra licitação nos nomes das tabelas para licitacao;
 ##### Para alterar as configurações do grafo basta ir pelo neo4j no grafo desejado, ir em settings e em modificar.
 
 #### Para executar o script basta alterar o valor da variável path_csv para o path da onde está localizados os seus csv's extraídos.
