@@ -9,6 +9,7 @@
 * Possuir o driver para o python do neo4j;
 * Substitua a palavra licitação(ou as que estiverem com nomes com caracteres suspeitos) nos nomes das tabelas para licitacao;
 ##### Para alterar as configurações do grafo basta ir pelo neo4j no grafo desejado, ir em settings e em modificar.
+##### Aparentemente o computador precisar ter mais de 4 gigas de ram, caso não tenha recomendo apenas importar o banco.
 
 #### Para executar o script basta alterar o valor da variável path_csv para o path absoluto da onde está localizados os seus csv's extraídos.
 
