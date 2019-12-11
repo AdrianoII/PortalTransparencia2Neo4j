@@ -12,6 +12,8 @@ comeco = time.time()
 
 #Path para a pasta em que os .csv estão extraidos, estão extraidos exemplo: '/home/adrianoii/TabelasBd/'
 path_csv = 'insira seu path aqui'
+#Senha para conexão do neo4j
+senha = 'insira sua senha aqui'
 
 #Carrego todos os csv's que serão utilizados, somente com as informações necessárias
 pessoa = pd.read_csv( path_csv + '201908_Cadastro.csv',';',encoding='latin1',dtype = str, usecols = ['NOME','CPF','MATRICULA','DESCRICAO_CARGO','SITUACAO_VINCULO','COD_ORG_EXERCICIO','ORG_EXERCICIO'])
@@ -62,7 +64,7 @@ del licitacao
 del contrato
 del participante
 
-driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "9090"))
+driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", senha))
 
 nos = [['Pessoa.csv','MERGE (p:Pessoa { nome: linha.NOME, cpf: linha.CPF})']
       ,['Empresa.csv','MERGE (e:Empresa {nomeSocial: linha.RAZAOSOCIAL, nomeFantasia: linha.NOMEFANTASIA, cnpj: linha.CNPJ})']
