@@ -10,6 +10,8 @@
 * Comentar e/ou remover `dbms.directories.import=import`, nas configurações do grafo para podermos abrir arquivos em qualquer path do sistema;
 * Possuir o pandas instalado;
 * Possuir o driver para o python do neo4j;
+* Possuir a biblioteca APOC no neo4j;
+
 ##### Para alterar as configurações do grafo basta ir pelo neo4j no grafo desejado, ir em settings e em modificar.
 ##### Caso tenha alguma dúvida em relação aos parâmetros que você precisa passar para o script, tente o -h.
 ##### Caso tenha algum problema relacionado com memória tente diminuir o numero do parâmetro commit.
