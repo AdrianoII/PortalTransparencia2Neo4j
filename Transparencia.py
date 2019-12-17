@@ -22,6 +22,7 @@ args = parser.parse_args()
 
 tempoCsv = time.time()
 
+#Renomeia os arquivos com nome com caracteres estranhos
 arqs = os.listdir(args.path_csv)
 
 for arq in arqs:
@@ -101,7 +102,7 @@ arestas = [['Pessoa.csv','MATCH (o:Orgao {codigoOrgao: linha.COD_ORG_EXERCICIO})
           ,['Licitacao.csv','MATCH (o:Orgao {codigoOrgao: linha.Codigo_Orgao}),(l:Licitacao {numero : linha.Numero_Licitacao}) CALL apoc.create.relationship(o,"Licitou",{},l) YIELD rel RETURN rel']
           ,['Contrato.csv','MATCH (e:Empresa {cnpj: linha.CNPJ}),(c:Contrato {numero : linha.Numero_Contrato, objeto : linha.Objeto}) CALL apoc.create.relationship(e,"Atuou",{},c) YIELD rel RETURN rel']
           ,['Contrato.csv','MATCH (o:Orgao {codigoOrgao: linha.Codigo_Orgao}),(c:Contrato {numero : linha.Numero_Contrato, objeto : linha.Objeto}) CALL apoc.create.relationship(o,"Contratou",{},c) YIELD rel RETURN rel']
-          ,['Participou.csv','MATCH (e:Empresa {cnpj: linha.CNPJ_Participante}),(l:Licitacao {numero : linha.Numero_Licitacao}) CALL apoc.merge.relationship(e,"Participou",{vencedor : toBoolean(linha.Flag_Vencedor)},{vencedor : toBoolean(linha.Flag_Vencedor)},l,{}) YIELD rel RETURN rel']
+          ,['Participou.csv','MATCH (e:Empresa {cnpj: linha.CNPJ_Participante}),(l:Licitacao {numero : linha.Numero_Licitacao}) MERGE (e)-[p:Participou]->(l) ON CREATE SET p += {vencedor : toBoolean(linha.Flag_Vencedor), participacoes : 1} ON MATCH SET p.participacoes = p.participacoes + 1 return p']
           ]
 
 indexes = ["CREATE INDEX ON :Pessoa(cpf,nome)"
